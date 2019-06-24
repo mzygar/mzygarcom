@@ -16,7 +16,7 @@
     authorwebsite = "https://www.mzygar.com"
     authorbio= "YASE - Yet Another Software Engineer, with an eye on mobile and blockchains"
     logo = "images/logo.jpg"
-    #googleAnalyticsUserID = "UA-79101-12"
+    googleAnalyticsUserID = "UA-53061824-1"
     # Optional RSS-Link, if not provided it defaults to the standard index.xml
     #RSSLink = "http://feeds.feedburner.com/..."
     githubName = "mzygar"
