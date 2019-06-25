@@ -16,7 +16,7 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 and then you wonder: Where did the stack trace go? The error message is not really helpful and asking lldb for more info using `expr $arg1` does not work. It may cause you to be stuck for a couple of hours, trying to pinpoint the cause of the exception. But how is this possible? Shouldn't debugger help you to track it down?!
 
 Well, chances are, you brought this misery upon yourself. When iOS10 was introduced, the console output become overly verbose, so most of the people used **OS_ACTIVITY_MODE** environmental variable to silence all these noise. It works well, even a bit too well. Apparently this setting also disables the usual stack trace dump related to crashes.
-Let's make it right again. Navigate to the Scheme settings by pressing `CMD <`(yes, that's `cmd`+`shift`+`,`), or by clicking your acitve scheme in the top left corner and choosing `Edit scheme`, then select `Run` and `Arguments` tab and uncheck the `OS_ACTIVITY_MODE` box.
+Let's make it right again. Navigate to the Scheme settings by pressing `CMD <`(yes, that's `cmd`+`shift`+`,`), or by clicking your acitve scheme in the top left corner and choosing `Edit scheme`, then select `Run` and `Arguments` tab and **uncheck** the `OS_ACTIVITY_MODE = disable` box.
 ![](edit-scheme.png)
 
 Now next time you launch your app, you'll get all the noise back, but also the helpful stack traces, like:
